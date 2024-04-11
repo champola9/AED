@@ -42,30 +42,30 @@ int main() {
     vector<Pessoa> pessoas;
     int numPessoas;
 
-    cout << "Quantas pessoas deseja cadastrar? ";
+    cout << "Quantas pessoas deseja cadastrar? \n";
     cin >> numPessoas;
 
     for (int i = 0; i < numPessoas; ++i) {
         Pessoa pessoa;
 
-        cout << "\nCadastro da pessoa " << i+1 << ":" << endl;
+        cout << "\nCadastro da pessoa " << i+1 << ":\n";
         string nome, telefone, tipoSanguineo;
         int idade;
 
-        cout << "Nome: ";
+        cout << "Nome: \n";
         cin.ignore(); 
         getline(cin, nome);
         pessoa.setNome(nome);
 
-        cout << "Telefone: ";
+        cout << "Telefone: \n";
         getline(cin, telefone);
         pessoa.setTelefone(telefone);
 
-        cout << "Tipo sanguíneo: ";
+        cout << "Tipo sanguíneo: \n";
         getline(cin, tipoSanguineo);
         pessoa.setTipoSanguineo(tipoSanguineo);
 
-        cout << "Idade: ";
+        cout << "Idade: \n";
         cin >> idade;
         pessoa.setIdade(idade);
 
@@ -77,9 +77,10 @@ int main() {
             doadoresUniversais.push_back(pessoa);
         }
     }
-    cout << "\nDoadores Universais:" << endl;
+    cout << "\nDoadores Universais:\n";
     for (const auto& doador : doadoresUniversais) {
-        cout << "Nome: " << doador.getNome() << ", Telefone: " << doador.getTelefone() << ", Idade: " << doador.getIdade() << endl;
+        cout << "Nome: " << doador.getNome() << ", Telefone: " << doador.getTelefone() << ", Idade: " << doador.getIdade() << "\n";
     }
     return 0;
 }
+
