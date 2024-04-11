@@ -15,7 +15,7 @@ public:
     }
 
     void mostrar() {
-        cout << real << " + " << imag << "i" << endl;
+        cout << real << " + " << imag << "i\n";
     }
 
     Complexo operator+(Complexo const &obj) {
@@ -33,7 +33,7 @@ public:
     Complexo operator/(Complexo const &obj) {
         float denominador = obj.real * obj.real + obj.imag * obj.imag;
         if (denominador == 0) {
-            cout << "Não é possível dividir por zero." << endl;
+            cout << "Não é possível dividir por zero.\n";
             return Complexo(0, 0);
         }
         return Complexo((real * obj.real + imag * obj.imag) / denominador,
@@ -107,3 +107,4 @@ int main() {
 
     return 0;
 }
+
