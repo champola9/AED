@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Dono
+{
+    private:
+    string nome;
+    int telefone;
+    
+};
+class Carro
+{
+    public:
+    Carro(string marca, string cor,int placa)
+    {
+        this -> marca = marca;
+        this -> cor = cor;
+        this -> placa = placa;
+    };
+    string getMarca()
+    {
+        return (marca) + "\n";
+    }
+    string getCor()
+    {
+        return (cor) + "\n";
+    }
+    string getPlaca()
+    {
+        return to_string(placa) + "\n";
+    }
+    private:
+    string marca;
+    string cor;
+    int placa;
+   
+};
+int main()
+{
+    Carro carro = Carro("Chevrolet", "Vermelho", 1233454);
+    cout<<carro.getMarca();
+    cout<<carro.getCor();
+    cout<<carro.getPlaca();
+
+    return 0;
+}
